@@ -1,12 +1,10 @@
 async function main() {
   // if you changed the name of the contract, be sure to update this here!
-  const MyToken = await hre.ethers.getContractFactory("MyToken");
+  const nft = await hre.ethers.deployContract("MyToken");
 
-  const nft = await MyToken.deploy();
+  await nft.waitForDeployment();
 
-  await nft.deployed();
-
-  console.log("NFT deployed to:", nft.address);
+  console.log(`deployed to ${nft.target}`);
  
   // mint one to yourself!
   const signer0 = await ethers.provider.getSigner(0);
