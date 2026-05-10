@@ -12,7 +12,7 @@
   "dependencies": {
     "@openzeppelin/contracts": "^4.8.0",
     "dotenv": "^16.0.3",
-    "hardhat": "^2.12.5",
+    "hardhat": "3.0.0-next.2",
     "ipfs-core": "^0.17.0",
     "ipfs-http-client": "^59.0.0"
   },
